@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-example",
+  "name": "example",
   "version": "0.0.1",
   "description": "An example ember app built with ember-cli",
   "private": true,
