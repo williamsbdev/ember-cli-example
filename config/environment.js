@@ -19,10 +19,6 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.contentSecurityPolicy = {
-    'script-src': "'self' 'unsafe-inline'"
-  }
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
