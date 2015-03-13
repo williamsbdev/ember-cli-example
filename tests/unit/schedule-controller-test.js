@@ -1,10 +1,9 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from '../helpers/start-app';
+import lookup from "ember-cli-test-helpers/tests/helpers/lookup";
 
 var application;
-
-var SHIFTS = '.shifts';
 
 module('Acceptance: Schedule', {
     beforeEach: function() {
@@ -15,10 +14,7 @@ module('Acceptance: Schedule', {
     }
 });
 
-test('will show schedule of employees working today', function(assert) {
-    visit('/schedule');
-    andThen(function() {
-        assert.equal(currentURL(), '/schedule');
-        assert.equal(find(SHIFTS).length, 3);
-    });
+test('test injection of plain Ember.Object', function(assert) {
+    var controller = lookup("controller:schedule");
+    assert.equal(controller.save(), "saved");
 });
