@@ -18,4 +18,5 @@ test('test injection of plain Ember.Object', function(assert) {
     var controller = lookup("controller:schedule");
     assert.equal(controller.savePerson(), "person saved");
     assert.equal(controller.saveCat(), "cat saved");
+    assert.equal(controller.askBirdToSpeak(), "chirped");
 });
