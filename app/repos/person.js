@@ -2,7 +2,7 @@ import Ember from "ember";
 
 var PersonRepo = Ember.Object.extend({
     save: function() {
-        return "saved";
+        return "person saved";
     }
 });
 

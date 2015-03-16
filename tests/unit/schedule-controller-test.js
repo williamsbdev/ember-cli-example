@@ -5,7 +5,7 @@ import lookup from "ember-cli-test-helpers/tests/helpers/lookup";
 
 var application;
 
-module('Acceptance: Schedule', {
+module('Unit: Schedule Controller', {
     beforeEach: function() {
         application = startApp();
     },
@@ -16,5 +16,6 @@ module('Acceptance: Schedule', {
 
 test('test injection of plain Ember.Object', function(assert) {
     var controller = lookup("controller:schedule");
-    assert.equal(controller.save(), "saved");
+    assert.equal(controller.savePerson(), "person saved");
+    assert.equal(controller.saveCat(), "cat saved");
 });
